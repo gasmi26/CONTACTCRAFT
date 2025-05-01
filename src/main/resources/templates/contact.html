@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{})}" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Contact</title>
+</head>
+<body>
+<section id="content" class="pt-20">
+  <h1 class="text-center text-3xl font-bold mb-6 text-gray-900 dark:text-white">Get in Touch</h1>
+  <h5 class="text-center text-2xl font-semibold mb-12 text-gray-700 dark:text-gray-300">We'd love to hear from you</h5>
+
+  <!-- Email Section -->
+  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105 max-w-lg mx-auto mb-8 text-center">
+    <i class="fas fa-envelope text-blue-600 text-4xl mb-4"></i>
+    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Email Us</h3>
+    <p class="text-gray-600 dark:text-gray-300">Reach out via email: <a href="mailto:support@scm.com" class="text-blue-500">support@scm.com</a></p>
+  </div>
+
+  <!-- Website Section -->
+  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105 max-w-lg mx-auto mb-8 text-center">
+    <i class="fas fa-globe text-blue-600 text-4xl mb-4"></i>
+    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Visit Our Website</h3>
+    <p class="text-gray-600 dark:text-gray-300">Find more information at <a href="http://www.scm.com" class="text-blue-500">www.scm.com</a></p>
+  </div>
+
+  <!-- Direct Message Section -->
+  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105 max-w-lg mx-auto text-center">
+    <i class="fas fa-comments text-blue-600 text-4xl mb-4"></i>
+    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Send Us a Message</h3>
+    <p class="text-gray-600 dark:text-gray-300">Fill out our contact form to get in touch with our team.</p>
+    <a href="/contact-form" class="text-blue-500 underline">Go to Contact Form</a>
+  </div>
+</section>
+</body>
+</html>

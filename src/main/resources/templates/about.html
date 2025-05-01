@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{})}" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>About</title>
+</head>
+<body>
+<section id="content" class="pt-20">
+  <h1 class="text-center text-3xl font-bold mb-6 text-gray-900 dark:text-white">Welcome to About Page</h1>
+  <h5 class="text-center text-2xl font-semibold mb-12 text-gray-700 dark:text-gray-300">Learn more about SCM</h5>
+
+  <!-- About the App -->
+  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105 max-w-lg mx-auto mb-8 text-center">
+    <i class="fas fa-cogs text-blue-600 text-4xl mb-4"></i>
+    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">About the App</h3>
+    <p class="text-gray-600 dark:text-gray-300">SCM (Smart Contact Manager) is a powerful tool designed to simplify contact management, ensuring seamless organization, secure storage, and accessibility across devices.</p>
+  </div>
+
+  <!-- About the Creator -->
+  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105 max-w-lg mx-auto mb-8 text-center">
+    <i class="fas fa-user text-blue-600 text-4xl mb-4"></i>
+    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">About the Creator</h3>
+    <p class="text-gray-600 dark:text-gray-300">SCM is developed by a passionate software engineer dedicated to building user-friendly applications that enhance productivity and security.</p>
+  </div>
+
+  <!-- Vision & Mission -->
+  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105 max-w-lg mx-auto text-center">
+    <i class="fas fa-lightbulb text-blue-600 text-4xl mb-4"></i>
+    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Vision & Mission</h3>
+    <p class="text-gray-600 dark:text-gray-300">Our goal is to provide a seamless, secure, and efficient way to manage contacts, empowering users with convenience and control over their data.</p>
+  </div>
+</section>
+</body>
+</html>

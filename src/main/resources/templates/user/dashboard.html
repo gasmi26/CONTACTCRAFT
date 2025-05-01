@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title data-th-text="${loggedInUser.name}+' |  Dashboard'">Dashboard</title>
+</head>
+<body>
+<div id="content">
+  <!-- Sidebar Section (if logged in) -->
+  <div th:if="${loggedInUser}">
+    <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+  </div>
+
+  <div class="sm:pl-64 pt-20" style="height: 1000px">
+    <div class="flex items-center justify-center md:pt-32 flex-col">
+      <!-- Dashboard Card -->
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-2xl w-full">
+        <div class="flex flex-col items-center">
+          <h2 class="text-3xl font-semibold mb-4" data-th-text="${loggedInUser.name}">Welcome, User!</h2>
+          <p class="text-gray-600 mb-6 text-center">This is your personalized Dashboard. Manage your profile, contacts, and feedback.</p>
+
+          <!-- Navigation Buttons -->
+          <div class="w-full flex justify-between mb-6">
+            <a href="/user/profile" class="bg-blue-600 text-white py-2 px-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300">Go to Profile</a>
+            <a href="/user/contacts" class="bg-blue-600 text-white py-2 px-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300">Contacts Page</a>
+            <a href="/user/contacts/add" class="bg-blue-600 text-white py-2 px-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300">Edit Contact</a>
+          </div>
+
+          <!-- Feedback Form Button -->
+          <div class="w-full text-center">
+            <a href="/user/feedback" class="bg-green-600 text-white py-2 px-6 rounded-full font-semibold hover:bg-green-700 transition duration-300">Give Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Section -->
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-2xl w-full mt-12">
+        <div class="flex flex-col items-center">
+          <img
+                  data-th-src="@{${loggedInUser.profilePic}}"
+                  src="/images/default-profile-photo.jpg"
+                  alt="Profile Photo"
+                  class="w-44 h-44 rounded-full shadow-lg object-cover mb-4">
+          <h2 class="text-2xl font-semibold mb-2" data-th-text="${loggedInUser.name}">User Name</h2>
+          <p class="text-gray-600 mb-2" data-th-text="${loggedInUser.email}">user.email@example.com</p>
+          <p class="text-gray-600 mb-2" data-th-text="${loggedInUser.phoneNumber}">123-456-7890</p>
+          <p class="text-gray-600 mb-4 text-center" data-th-text="${loggedInUser.about}">About the user...</p>
+          <div class="w-full flex justify-between">
+            <p class="text-sm text-gray-500">Email Verified: <span class="font-medium text-gray-700" id="email-verified" data-th-text="${loggedInUser.emailVerified ? 'YES':'NO'}">No</span></p>
+            <p class="text-sm text-gray-500">Phone Verified: <span class="font-medium text-gray-700" id="phone-verified" data-th-text="${loggedInUser.phoneVerified ? 'YES':'NO'}">No</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  console.log("Dashboard page");
+</script>
+</body>
+</html>

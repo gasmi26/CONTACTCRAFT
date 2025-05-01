@@ -1,0 +1,53 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql_db_docker
+    environment:
+      MYSQL_ROOT_PASSWORD: root1234
+      MYSQL_DATABASE: scm
+    ports:
+      - "3307:3306"
+
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: root123
+
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql
+  springboot:
+    build: .
+    container_name: scm_springboot_project
+    environment:
+      SERVER_PORT: 8081
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_DB: scm
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root1234
+      EMAIL_HOST: live.smtp.mailtrap.io
+      EMAIL_PORT: 587
+      EMAIL_USERNAME: api
+      EMAIL_PASSWORD: 4c9329e4eba730db683223bd45a25b3a
+      EMAIL_DOMAIN: scm@demomailtrap.com
+      CLOUDINARY_API_KEY: 898946826379514
+      CLOUDINARY_API_SECRET: 39JteZMzReWVny-j0-74eTenXlU
+      CLOUDINARY_NAME: dnfk0pvir
+    ports:
+      - "8082:8080"
+    depends_on:
+      - mysql
+volumes:
+  mysql_data:

@@ -1,0 +1,153 @@
+/* Google & GitHub Button Styling */
+.social-login-btn {
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  padding: 14px 18px 14px 45px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #333; /* Improved contrast */
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: 14px center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Google Button */
+.login-with-google-btn {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg');
+  background-size: 20px;
+}
+
+/* GitHub Button */
+.login-with-github-btn {
+  background-color: #24292e;
+  color: white;
+}
+
+.login-with-github-btn svg {
+  margin-right: 10px;
+}
+
+/* Google & GitHub Button Dark Mode */
+html.dark .social-login-btn {
+  color: #ffffff !important;
+  background-color: #333 !important;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark .login-with-github-btn {
+  background-color: #161b22 !important; /* Darker GitHub button */
+}
+
+/* General Light/Dark Mode */
+html.light {
+  background-color:  #ffe4e1;
+  color: #000000;
+}
+
+html.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Feature Box */
+.feature-box {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+html.dark .feature-box {
+  background-color: #2a2a2a !important; /* Slightly lighter for readability */
+  color: #ffffff !important;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Headings & Paragraphs */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark p {
+  color: #e0e0e0 !important;
+}
+
+/* Links */
+html.dark a {
+  color: #4da8da !important;
+}
+
+/* Buttons */
+html.dark button {
+  background-color: #1D2A4B !important; /* Improved contrast */
+  color: white !important;
+  border: 1px solid #555 !important;
+}
+
+html.dark button * {
+  color: #ffffff !important;
+}
+
+/* Logout Button */
+.logout-btn {
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #d9534f; /* Red color for logout */
+  color: white;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c9302c;
+}
+
+html.dark .logout-btn {
+  background-color: #1D2A4B !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark .logout-btn:hover {
+  background-color: #8b3030 !important;
+}
+
+/* Navbar */
+html.dark .navbar {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+html.dark .navbar a {
+  color: #4da8da !important;
+}
+
+/* Input Fields */
+html.dark input,
+html.dark textarea {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+  border: 1px solid #555 !important;
+}
+
+/* Ensure all text inside feature boxes is visible */
+html.dark .feature-box p,
+html.dark .feature-box span,
+html.dark .feature-box h1,
+html.dark .feature-box h2,
+html.dark .feature-box h3 {
+  color: #ffffff !important;
+}

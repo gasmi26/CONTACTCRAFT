@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home page</title>
+</head>
+<body>
+<div id="content" class="border border-gray-200 rounded-lg"> <section class="bg-blue-600 dark:bg-black text-white py-20 animate__animated animate__fadeInDown">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-4 dark:text-white">Welcome to Contact Manager</h2>
+    <p class="text-lg mb-8 dark:text-gray-300">Manage all your contacts effortlessly and securely in one place.</p>
+    <a href="/login" class="bg-white dark:bg-gray-700 text-blue-600 dark:text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-gray-600 transition duration-300">Get Started</a>
+  </div>
+</section>
+
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeInUp text-gray-900 dark:text-white">Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+          <i class="fas fa-address-book text-blue-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Easy Contact Management</h3>
+          <p class="text-gray-600 dark:text-gray-300">Add, edit, and organize your contacts in a user-friendly interface.</p>
+        </div>
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+          <i class="fas fa-lock text-blue-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Secure Storage</h3>
+          <p class="text-gray-600 dark:text-gray-300">Your data is protected with top-level encryption and security measures.</p>
+        </div>
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+          <i class="fas fa-globe text-blue-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">24/7 Access</h3>
+          <p class="text-gray-600 dark:text-gray-300">Access your contacts anytime, anywhere from any device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-600 dark:bg-black text-white py-20 animate__animated animate__fadeInUp">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4 dark:text-white">Ready to Manage Your Contacts?</h2>
+      <p class="text-lg mb-8 dark:text-gray-300">Sign up today and experience the easiest way to manage your contacts.</p>
+      <a href="/register" class="bg-white dark:bg-gray-700 text-blue-600 dark:text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-gray-600 transition duration-300">Create an Account</a>
+    </div>
+  </section>
+
+
+</div>
+</div>
+
+<script>
+  console.log("Home page");
+</script>
+</body>
+</html>
