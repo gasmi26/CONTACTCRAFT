@@ -83,7 +83,7 @@ public class ContactController {
 
         // image process
 
-        // uplod karne ka code
+       
         Contact contact = new Contact();
         contact.setName(contactForm.getName());
         contact.setFavorite(contactForm.isFavorite());
