@@ -8,11 +8,6 @@ public class FileValidator implements ConstraintValidator<ValidFile, MultipartFi
 
     private static final long MAX_FILE_SIZE = 1024 * 1024 * 2; // 2MB
 
-    // type
-
-    // height
-
-    // width
 
     @Override
     public boolean isValid(MultipartFile file, ConstraintValidatorContext context) {
@@ -36,17 +31,7 @@ public class FileValidator implements ConstraintValidator<ValidFile, MultipartFi
             return false;
         }
 
-        // resolution
-
-        // try {
-        // BufferedImage bufferedImage = ImageIO.read(file.getInputStream());
-
-        // if(bufferedImage.getHe)
-
-        // } catch (IOException e) {
-        // // TODO Auto-generated catch block
-        // e.printStackTrace();
-        // }
+        
         return true;
     }
 
