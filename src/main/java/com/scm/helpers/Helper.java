@@ -15,7 +15,7 @@ public class Helper {
 
     public static String getEmailOfLoggedInUser(Authentication authentication) {
 
-        // agar email is password se login kiya hai to : email kaise nikalenge
+       
         if (authentication instanceof OAuth2AuthenticationToken) {
 
             var aOAuth2AuthenticationToken = (OAuth2AuthenticationToken) authentication;
