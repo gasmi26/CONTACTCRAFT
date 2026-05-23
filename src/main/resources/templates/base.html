@@ -1,3 +1,73 @@
+<!--<!DOCTYPE html>-->
+<!--<html-->
+<!--        class="light"-->
+<!--        lang="en"-->
+<!--        th:fragment="parent(content,title,script)"-->
+<!--        xmlns:th="http://www.thymeleaf.org"-->
+<!--&gt;-->
+<!--<head>-->
+<!--  <meta charset="UTF-8" />-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+<!--  <title data-th-replace="${title}">CONTACTCRAFT</title>-->
+
+<!--  <link-->
+<!--          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"-->
+<!--          rel="stylesheet"-->
+<!--  />-->
+<!--  <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />-->
+<!--  <link rel="stylesheet" data-th-href="@{'/css/style.css'}" />-->
+
+
+<!--  <link-->
+<!--          rel="stylesheet"-->
+<!--          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"-->
+<!--          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="-->
+<!--          crossorigin="anonymous"-->
+<!--          referrerpolicy="no-referrer"-->
+<!--  />-->
+<!--</head>-->
+<!--<body class="dark:bg-gray-900 bg-gray-100 dark:text-white">-->
+
+<!--<div th:if="${loggedInUser}">-->
+<!--  <div data-th-replace="~{user/user_navbar::user-navbar}"></div>-->
+<!--</div>-->
+
+
+<!--<div th:unless="${loggedInUser}">-->
+<!--  <div data-th-replace="~{navbar :: navbar}"></div>-->
+<!--</div>-->
+
+
+<!--<div class="">-->
+<!--  <section data-th-replace="${content}"></section>-->
+<!--</div>-->
+
+<!--<div id="page-container">-->
+
+<!--  <header>-->
+<!--  </header>-->
+
+<!--  <main style="display: flex; flex-direction: column;">-->
+<!--  </main>-->
+
+<!--  <footer class="bg-gray-800 dark:bg-gray-900 text-white py-4 text-center">-->
+<!--    <div class="container mx-auto">-->
+<!--      <p>&copy; 2024 Contact Manager. All rights reserved.</p>-->
+<!--    </div>-->
+<!--  </footer>-->
+
+<!--</div>-->
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>-->
+
+<!--<div th:replace="${script}"></div>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
+<!--<script src="/js/script.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
 <!DOCTYPE html>
 <html
         class="light"
@@ -8,64 +78,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-th-replace="${title}">SCM</title>
+  <title data-th-replace="${title}">CONTACTCRAFT</title>
 
-  <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
-          rel="stylesheet"
-  />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet"/>
   <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
   <link rel="stylesheet" data-th-href="@{'/css/style.css'}" />
 
-  <!-- font awesome -->
-  <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer"
-  />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
+
 <body class="dark:bg-gray-900 bg-gray-100 dark:text-white">
-<!-- commona header -->
 
-<!--  user is logged in : navbar -->
+<!-- NAVBAR -->
 <div th:if="${loggedInUser}">
-  <div data-th-replace="~{user/user_navbar::user-navbar}"></div>
+  <div th:replace="~{user/user_navbar :: user-navbar}"></div>
 </div>
 
-<!-- user is not logged : navbar -->
 <div th:unless="${loggedInUser}">
-  <div data-th-replace="~{navbar :: navbar}"></div>
+  <div th:replace="~{navbar :: navbar}"></div>
 </div>
 
-<!-- main content -->
-<div class="">
-  <section data-th-replace="${content}"></section>
-</div>
-<!-- flow bite content -->
+<!-- ✅ FIX: use INSERT instead of REPLACE -->
+<div th:replace="${content}"></div>
 
-<!-- common footer -->
-<!-- <footer class="p-4">Footer: Learn Code With Durgesh</footer> -->
-<div id="page-container">
+<footer class="bg-gray-800 dark:bg-gray-900 text-white py-4 text-center">
+  <div class="container mx-auto">
+    <p>&copy; 2024 Contact Manager. All rights reserved.</p>
+  </div>
+</footer>
 
-  <header>
-  </header>
-
-  <main style="display: flex; flex-direction: column;">
-  </main>
-
-  <footer class="bg-gray-800 dark:bg-gray-900 text-white py-4 text-center">
-    <div class="container mx-auto">
-      <p>&copy; 2024 Contact Manager. All rights reserved.</p>
-    </div>
-  </footer>
-
-</div>
-
+<!-- SCRIPTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script data-th-src="@{'/js/script.js'}"></script>
-<th:block data-th-replace="${script}"></th:block>
+<script src="/js/script.js"></script>
+
+<!-- IMPORTANT: script fragment LAST -->
+<div th:replace="${script}"></div>
+
 </body>
 </html>

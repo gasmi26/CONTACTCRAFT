@@ -34,7 +34,7 @@ public class AuthFailtureHandler implements AuthenticationFailureHandler {
             response.sendRedirect("/login");
         } else {
             response.sendRedirect("/login?error=true");
-            // request.getRequestDispatcher("/login").forward(request, response);
+
 
         }
 
