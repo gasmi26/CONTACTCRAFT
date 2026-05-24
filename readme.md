@@ -7,25 +7,39 @@ A full-stack Spring Boot MVC web application for managing contacts with secure a
 🔐 User authentication (Signup/Login)
 
 📧 Email verification using token-based verification link
+
 🌐 OAuth login with Google and GitHub
+
 👤 Secure session-based login system
+
 📇 CRUD operations for managing contacts
-📤 Export contacts (CSV / Excel)
+
+📤 Export contacts (CSV)
+
 💬 Real-time chat feature for users
+
 📊 Performance testing using JMeter
+
 📈 Monitoring using Spring Boot Actuator & Micrometer
+
 🧠 System Architecture
+
 MVC-based architecture using Spring Boot
 Controller → Service → Repository layered design
 Thymeleaf used for server-side rendering
+
 🛠️ Tech Stack
+
 Backend
+
 Java
 Spring Boot
 Spring MVC
 Spring Security
 Spring Data JPA
+
 Frontend
+
 Thymeleaf
 HTML5
 CSS3
@@ -40,20 +54,19 @@ Apache JMeter
 Spring Boot Actuator
 Micrometer
 Maven
+
 📊 Performance Metrics
+
 ⏱ Average Response Time: ~13 ms
 📈 Throughput: ~77 requests/sec
 ⚡ Error Rate: 0% under load testing
 🧪 Tested using 100+ concurrent virtual users (JMeter)
 📤 Contact Export Feature
 
-Users can export their saved contacts in:
-
-CSV format
-
 💬 Chat Feature
 Real-time user chat module inside application
 Enhances user interaction and engagement
+
 📸 Screenshots 
 Home page
 <img width="1904" height="926" alt="image" src="https://github.com/user-attachments/assets/a219f8b3-fed4-4dc2-b3d9-9306955b8318" />
