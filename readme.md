@@ -3,7 +3,9 @@
 A full-stack Spring Boot MVC web application for managing contacts with secure authentication, email verification, OAuth login, real-time chat, and performance monitoring.
 
 🚀 Features
+
 🔐 User authentication (Signup/Login)
+
 📧 Email verification using token-based verification link
 🌐 OAuth login with Google and GitHub
 👤 Secure session-based login system
