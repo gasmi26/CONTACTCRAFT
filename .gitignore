@@ -34,3 +34,8 @@ build/
 
 mysql_data/
 keyfile.txt
+# open .gitignore and add these lines:
+application-dev.properties
+application.properties
+applicationtest.properties
+*.properties
