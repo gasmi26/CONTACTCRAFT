@@ -2,7 +2,7 @@
 
 A full-stack Spring Boot MVC web application for managing contacts with secure authentication, email verification, OAuth login, real-time chat, and performance monitoring.
 
-🚀 Features
+🚀 FEATURES
 
 🔐 User authentication (Signup/Login)
 
@@ -22,15 +22,15 @@ A full-stack Spring Boot MVC web application for managing contacts with secure a
 
 📈 Monitoring using Spring Boot Actuator & Micrometer
 
-🧠 System Architecture
+🧠SYSTEM ARCHITECTURE
 
 MVC-based architecture using Spring Boot
 Controller → Service → Repository layered design
 Thymeleaf used for server-side rendering
 
-🛠️ Tech Stack
+🛠️ TECH STACK
 
-Backend
+Backend:
 
 Java
 Spring Boot
@@ -38,7 +38,7 @@ Spring MVC
 Spring Security
 Spring Data JPA
 
-Frontend
+Frontend:
 
 Thymeleaf
 HTML5
@@ -55,7 +55,7 @@ Spring Boot Actuator
 Micrometer
 Maven
 
-📊 Performance Metrics
+📊 PERFORMANE METRICES
 
 ⏱ Average Response Time: ~13 ms
 📈 Throughput: ~77 requests/sec
@@ -63,11 +63,12 @@ Maven
 🧪 Tested using 100+ concurrent virtual users (JMeter)
 📤 Contact Export Feature
 
-💬 Chat Feature
+💬 CHAT FEATURE
+
 Real-time user chat module inside application
 Enhances user interaction and engagement
 
-📸 Screenshots 
+📸 SCREENSHOTS
 Home page
 <img width="1904" height="926" alt="image" src="https://github.com/user-attachments/assets/a219f8b3-fed4-4dc2-b3d9-9306955b8318" />
 
